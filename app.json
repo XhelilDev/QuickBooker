@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "TerminApp",
-    "slug": "TerminApp",
+    "name": "QuickBooker",
+    "slug": "QuickBooker",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -15,13 +15,24 @@
       "supportsTablet": true
     },
     "android": {
+      "versinCode": 1,
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/adaptiveicon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.xhelil.QuickBooker"
+
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "f4d80580-0244-4c9c-aaa3-1b924a9f5353"
+      }
     }
+  },
+  "react-native-google-mobile-ads": {
+    "android_app_id": "ca-app-pub-9937294921073271~3814364416"
   }
 }
