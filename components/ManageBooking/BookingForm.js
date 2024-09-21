@@ -67,6 +67,7 @@ function BookingForm({submitButtonLabel,onCancel,onSubmit,defaultValues}) {
             onChangeText:inputChangeHandler.bind(this,'description'),
             value:inputs.description.value
         }}/>
+         
         {formIsValid && <Text style={styles.errorText}>Invalid input values-please check your entered data!</Text>}
           <View style={styles.buttons}>
                 <Button style={styles.button} mode="flat" onPress={onCancel}>Cancel</Button>

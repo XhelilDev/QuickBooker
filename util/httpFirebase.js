@@ -6,13 +6,13 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 // Konfigurimi i Firebase
 const firebaseConfig = {
-    apiKey: "AIzaSyDxLgG3cMZoOxRbDBTNbW18cJLbDPru2sE",
-    authDomain: "booking-app-acac9.firebaseapp.com",
-    databaseURL: "https://booking-app-acac9-default-rtdb.firebaseio.com",
-    projectId: "booking-app-acac9",
-    storageBucket: "booking-app-acac9.appspot.com",
-    messagingSenderId: "751331239372",
-    appId: "1:751331239372:web:cf8fe815b4e80745cfa969"
+    apiKey: "",
+    authDomain: "",
+    databaseURL: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: ""
 };
 
 // Inicializo Firebase
@@ -40,7 +40,7 @@ export const storeBooking = async (uid, bookingData) => {
       const userBookingsRef = ref(database, `bookings/${uid}`);
       const newBookingRef = push(userBookingsRef);
       
-      console.log('Booking data being stored:', bookingData); // Logo të dhënat që po dërgohen
+      //console.log('Booking data being stored:', bookingData); // Logo të dhënat që po dërgohen
       
       // Sigurohu që bookingData ka të dhëna për description dhe date
       await set(newBookingRef, {
@@ -48,7 +48,7 @@ export const storeBooking = async (uid, bookingData) => {
         date: bookingData.date.toISOString()
       });
       
-      console.log('Booking stored with ID:', newBookingRef.key);
+      //console.log('Booking stored with ID:', newBookingRef.key);
       return newBookingRef.key;
     } catch (error) {
       console.error('Error storing booking:', error);
@@ -64,7 +64,7 @@ export const storeBooking = async (uid, bookingData) => {
       const userBookingsRef = ref(database, `bookings/${uid}`);
       const snapshot = await get(userBookingsRef);
       
-      console.log('Snapshot data:', snapshot.val()); // Logo të dhënat nga snapshot
+      //console.log('Snapshot data:', snapshot.val()); // Logo të dhënat nga snapshot
       
       if (snapshot.exists()) {
         const bookings = snapshot.val();

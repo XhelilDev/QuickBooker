@@ -18,7 +18,7 @@ function RecentBookings() {
 
             // Kontrollojmë nëse uid ekziston para se të bëjmë thirrjen
             if (!uid) {
-                console.error('UID is missing');
+                //console.error('UID is missing');
                 setError('UID is missing');
                 setIsFetching(false); // Ndalojmë spinner-in në rast gabimi
                 return;
@@ -27,7 +27,7 @@ function RecentBookings() {
             try {
                 console.log('Fetching bookings for UID:', uid);
                 const bookings = await fetchBookings(uid);
-                console.log('Bookings fetched successfully:', bookings);
+                //console.log('Bookings fetched successfully:', bookings);
                 bookingsCtx.setBookings(bookings); // Ruaj rezervimet në kontekst
             } catch (error) {
                 console.error('Error fetching bookings:', error);
@@ -43,13 +43,13 @@ function RecentBookings() {
 
     // Nëse ka gabim, shfaqim mesazhin e gabimit
     if (error) {
-        console.log('Displaying ErrorOverlay with message:', error);
+        //console.log('Displaying ErrorOverlay with message:', error);
         return <ErrorOverlay message={error} />;
     }
 
     // Nëse jemi duke e marrë rezervimin, shfaqim spinner-in
     if (isFetching) {
-        console.log('Displaying SpinnerOverlay, isFetching:', isFetching);
+        //console.log('Displaying SpinnerOverlay, isFetching:', isFetching);
         return <LoadingOverlay />;
     }
 
