@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BACKEND_URL = 'https://booking-app-acac9-default-rtdb.firebaseio.com';
+const BACKEND_URL = '';
 
 export async function storeBooking(bookingData) {
     
